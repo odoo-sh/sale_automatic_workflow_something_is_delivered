@@ -6,9 +6,9 @@ from odoo import models, fields, api
 
 class SaleOrder(models.Model):
     _inherit = "sale.order"
-    
+
     something_is_delivered = fields.Boolean(compute='_compute_something_is_delivered', string="Something Is Delivered", store=True,)
-    
+
     @api.depends('state', 'order_line', 'order_line.qty_delivered')
     def _compute_something_is_delivered(self):
         for order in self:

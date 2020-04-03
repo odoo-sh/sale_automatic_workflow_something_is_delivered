@@ -1,24 +1,9 @@
-
 ==============================================
 Sale Automatic Workflow Something Is Delivered
 ==============================================
 
-This module extends the functionality of ... to support ...
-and to allow you to ...
-
-Configuration
-=============
-
-To configure this module, you need to:
-
-#. Go to ...
-
-Usage
-=====
-
-To use this module, you need to:
-
-#. Go to ...
+This module adds a Boolean on the SO as "Something is delivered" and
+so invoices are created for a partial delivery.
 
 Contributors
 ------------
