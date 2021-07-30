@@ -22,5 +22,7 @@ class SaleOrder(models.Model):
     def _compute_something_is_delivered(self):
         for order in self:
             order.something_is_delivered = False
-            if order.order_line:
-                order.something_is_delivered = any([x.qty_delivered for x in order.order_line])
+            for line in order.order_line:
+                if line.all_qty_delivered:
+                    order.something_is_delivered = True
+                    break
