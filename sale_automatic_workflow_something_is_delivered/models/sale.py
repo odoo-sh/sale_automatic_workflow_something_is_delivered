@@ -23,6 +23,6 @@ class SaleOrder(models.Model):
         for order in self:
             order.something_is_delivered = False
             for line in order.order_line:
-                if line.all_qty_delivered:
+                if line.qty_delivered:
                     order.something_is_delivered = True
                     break
