@@ -16,7 +16,7 @@ class SaleOrder(models.Model):
             orders = self.search([]).filtered(lambda x : x.something_is_delivered == value )
         else:
             orders = self.search([]).filtered(lambda x : x.something_is_delivered == False )
-        return [('id', operator, [x.id for x in orders] if orders else False )]
+        return [('id', 'in', [x.id for x in orders] if orders else False )]
 
     @api.depends('state', 'order_line', 'order_line.qty_delivered')
     def _compute_something_is_delivered(self):
