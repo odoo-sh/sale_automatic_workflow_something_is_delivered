@@ -6,12 +6,12 @@
     'summary': """
         This module adds a Boolean on the SO as "Something is delivered" and
         so invoices are created for a partial delivery.""",
-    'version': "14.0.1.0.0",
+    'version': "15.0.1.0.0",
     'category': 'Uncategorized',
     'website': "http://sodexis.com/",
     'author': "Sodexis",
     'license': 'OPL-1',
-    'installable': True,
+    'installable': False,
     'application': False,
     'depends': [
         'sale_automatic_workflow',
